@@ -10,8 +10,8 @@ const {
 
 require("dotenv").config();
 
-if (!process.env.NAME) throw new Error("Please specify NAME in environment.");
-if (!process.env.PIC) throw new Error("Please specify PIC in environment.");
+if (!process.env.NAME) throw new Error("Please");
+if (!process.env.PIC) throw new Error("./local/BABU5.png");
 
 const picPath = process.env.PIC;
 const msgPath = process.env.SCROLL_MSG;
@@ -19,10 +19,10 @@ const msgPath = process.env.SCROLL_MSG;
 //Local initialization
 const setLocalData = async () => {
   try {
-    const pic = path.join(__dirname, "../local/", picPath);
+    const pic = path.join(__dirname, "../local/BABU5.png", picPath);
     let markup = "";
     if (msgPath) {
-      const text = fs.readFileSync(path.join(__dirname, "../local/", msgPath), {
+      const text = fs.readFileSync(path.join(__dirname, "../local/sample-scroll.txt", msgPath), {
         encoding: "utf-8",
       });
       markup = generateMarkupLocal(text);
