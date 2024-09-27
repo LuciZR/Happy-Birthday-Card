@@ -55,9 +55,7 @@ const setRemoteData = async () => {
     }
     await setPic(pic);
     genIndex(markup);
-  } catch (e) {
-    throw new Error(e.message);
-  }
+  } catch (e)
 };
 
 if (process.argv[2] === "--local") setLocalData();
